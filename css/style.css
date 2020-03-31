@@ -1,65 +1,151 @@
-.nav{
-    height: 4.6rem;
+.nav {
+  height: 4.6rem;
 }
 
-.texto-link{
-    font-size: 1.2rem;
-    border: 1px solid transparent;
+.texto-link {
+  font-size: 1.2rem;
+  border: 1px solid transparent;
 }
 
-.rede-social{
-    width: 31px;
-    height: 31px;
+.rede-social {
+  width: 31px;
+  height: 31px;
 }
 
-#carouselExampleFade{
-    width: 600px;
-    height: 300px;
+#carouselExampleFade {
+  width: 600px;
+  height: 300px;
 }
 
-.jumbotron{
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-left: 0px;
-    background-color:#f9b176;
-    color: #393a3c;
+.jumbotron {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+  /* tirando padding do jumbotron */
+  background-color: #f9b176;
+  color: #393a3c;
 }
 
-.languages-icon{
-    width: 30px;
-    height: 27px;
+.languages-icon {
+  width: 30px;
+  height: 27px;
 }
 
-.menu-buttons{
-    color: #ffffff;
-    background-color: #dc3545;
-    border-style: none;
+.botoes-menu {
+  color: #ffffff;
+  background-color: #dc3545;
+  border-style: none;
 }
-.menu-buttons:hover{
-    background-color: #f15429;
-    /* border-style: groove; */
-    /* border: 1px groove #ffffff; */
-    /* border-color: black; */
-    border-color: #dae0e5;
-    box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
-    transition: background-color, box-shadow 0.5s;
+.botoes-menu:hover {
+  background-color: #f15429;
+  border-color: #dae0e5;
+  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+  transition: background-color, box-shadow 0.5s;
 }
 
-#t-language{
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #ffffff;
+#t-language {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.logo-menu {
+  width: 50px;
+  height: 50px;
+}
+.botoes-menu:focus {
+  background-color: #6f4640;
+  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+  transition: background-color 2s;
+}
+
+/* alterar a cor do menu mobile e sua borda */
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-dark .navbar-toggler {
+  color: rgba(255, 255, 255, 1);
+  border-color: rgba(255, 255, 255, 1);
+}
+
+.box-shadow {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.display-1{
+  font-size:calc(50px + 3.5vw);
+}
+
+.card-img-top{
+  height: 300px;
+}
+
+#ifpa{
+  width: 120px;
+  height: 120px;
+}
+
+#utad{
+  width: 208px;
+  height: 140px;
+}
+
+#alicante{
+  width: 200px;
+  height: 200px;
+}
+
+#lemans{
+  width: 350px;
+  height: 140px;
 }
 
 
-.logo-menu{
-    width: 50px;
-    height: 28x;
-    
+@media (max-width: 1048px) {
+  .logo-menu {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar {
+    padding-top: 7px;
+  }
+  .texto-link-padding{
+    padding-left: 7px;
+  }
+  .texto-link {
+    font-size: 1.04rem;
+  }
+
+  #t-language {
+    font-size: 1.04rem;
+  }
+}
+
+/* mapa responsivo */
+
+.mapWrapper {
+  position: relative;
+  /*  calcular altura do iframe dividida pela largura e então converter em porcentagem  */
+  padding-bottom: 33.3333334%;
+  height: 400px;
 
 }
-.menu-buttons:focus{
- background-color: #6f4640;
- box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
- transition: background-color 2s;
+.mapWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
+
+/* inverter cores para deixar o botão de controle em dark style  */
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(1);
+}
+
+
